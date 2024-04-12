@@ -28,3 +28,22 @@ class Solution(object):
                 stack.append([node.right, node_depth + 1])
 
         return depth
+
+# BFS
+class Solution(object):
+    def maxDepth(self, root):
+        if not root:
+            return 0
+
+        queue = [root]
+        depth = 0
+        while queue:
+            for i in range(len(queue)):
+                node = queue.pop(0)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            depth += 1
+
+        return depth
