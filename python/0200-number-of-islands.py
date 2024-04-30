@@ -1,4 +1,4 @@
-// bfs approach
+# bfs approach
 class Solution(object):
     def numIslands(self, grid):
         rows, cols = len(grid), len(grid[0])
